@@ -1,0 +1,55 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"app.get in nodejs":{
+		"prefix": "get",
+		"body":[
+			"app.get('$1',(request,response)=>{",
+			"$2",
+			"});",
+		],
+		"description": "Get a get request to be used in nodejs rest api"
+	},
+
+	"app.put in nodejs":{
+		"prefix": "put",
+		"body":[
+			"app.put('$1',(request,response)=>{",
+			"$2",
+			"});",
+		],
+		"description": "Get a put request to be used in nodejs rest api"
+	},
+
+	"express boilerplate":{
+		"prefix": "express",
+		"body": [
+			"const express = require(\"express\")",
+			"const app = express();",
+			"\n",
+			"app.use(express.json());",
+			"app.get('/',(req,res)=>{",
+				"res.json({\"message\":\"reached home for $1 application api\"})",
+			"});",
+			"\n",
+			"const port = process.env.PORT || 3000;",
+			"\n",
+			"app.listen(port,()=>{",
+    		"console.log(`listening on port ${port}`);",
+			"})"
+		],
+		"description": "express js main thing boilerplate"
+	}
+
+}
